@@ -1,6 +1,6 @@
 /* IMPORT */
-// import { useLocation, matchPath } from "react-router";
-// import { Link, Route, Routes } from "react-router-dom";
+import { useLocation, matchPath } from "react-router";
+import { Route, Routes } from "react-router-dom";
 import "../styles/App.scss";
 import { useEffect, useState } from "react";
 // Importamos el servicio del local storage
@@ -12,6 +12,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import ListChasracter from "./main/ListCharacter";
 import Filters from "./main/Filters";
+import DetailCharacter from "./DetailCharacter";
 
 function App() {
   /* VARIABLES Y DATOS */
@@ -39,24 +40,32 @@ function App() {
   });
   /* HTML */
 
-  // const { pathname } = useLocation();
-  // const routeData = matchPath("product/:productId", pathname);
-
-  // const productId = routeData !== null ? routeData.params.productId : "";
+  const { pathname } = useLocation();
+  const routeData = matchPath("detail/:id", pathname);
+  const productId = routeData === null ? null : routeData.params.id;
+  const productFound = dataFetch.find((obj) => obj.id === productId);
 
   return (
     <div className='App'>
       <Header />
       <main>
-        <Filters handleName={handleName} />
-        <ListChasracter dataFetch={nameFilter} inputName={inputName} />
+        <Routes>
+          <Route
+            path='/'
+            element={
+              <>
+                <Filters handleName={handleName} />
+                <ListChasracter dataFetch={nameFilter} inputName={inputName} />
+              </>
+            }
+          />
+          <Route
+            path='/detail/:id'
+            element={<DetailCharacter productFound={productFound} />}
+          />
+        </Routes>
       </main>
       <Footer />
-
-      {/* <Routes>
-        <Route path='/' element={<h2>Página de inicio</h2>} />
-        <Route path='/contact' element={<h2>Página de contacto</h2>} />
-      </Routes> */}
     </div>
   );
 }
