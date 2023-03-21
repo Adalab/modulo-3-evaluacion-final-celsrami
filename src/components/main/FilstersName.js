@@ -4,7 +4,7 @@ const FiltersName = ({ handleName, inputName }) => {
   };
   return (
     <label htmlFor='name'>
-      Busca tu personaje
+      ¿Quieres buscar un personaje?
       <input
         name='name'
         type='text'

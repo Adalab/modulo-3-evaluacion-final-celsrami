@@ -18,18 +18,23 @@ function App() {
   /* VARIABLES Y DATOS */
   const [dataFetch, setDataFetch] = useState([]);
   const [inputName, setinputName] = useState("");
+  const [house, setHouse] = useState("gryffindor");
 
   /* EFECTOS */
   useEffect(() => {
-    callToApi().then((data) => {
+    callToApi(house).then((data) => {
       setDataFetch(data);
     });
-  }, []);
+  }, [house]);
 
   /* FUNCIONES HANDLER */
 
   const handleName = (value) => {
     setinputName(value);
+  };
+
+  const handleHouse = (value) => {
+    setHouse(value);
   };
   /* FUNCIONES Y VARIABLES AUXILIARES PARA PINTAR EL HTML */
 
@@ -54,7 +59,12 @@ function App() {
             path='/'
             element={
               <>
-                <Filters handleName={handleName} />
+                <Filters
+                  handleName={handleName}
+                  inputName={inputName}
+                  handleHouse={handleHouse}
+                  house={house}
+                />
                 <ListChasracter dataFetch={nameFilter} inputName={inputName} />
               </>
             }

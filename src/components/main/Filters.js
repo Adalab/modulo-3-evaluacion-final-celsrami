@@ -1,6 +1,7 @@
 import FiltersName from "./FilstersName";
+import FiltersHouse from "./FiltersHouse";
 
-const Filters = ({ handleName, inputName }) => {
+const Filters = ({ handleName, inputName, handleHouse, house }) => {
   const handleSubmit = (ev) => {
     ev.preventDefault();
   };
@@ -8,6 +9,7 @@ const Filters = ({ handleName, inputName }) => {
     <section>
       <form onSubmit={handleSubmit}>
         <FiltersName handleName={handleName} inputName={inputName} />
+        <FiltersHouse handleHouse={handleHouse} house={house} />
       </form>
     </section>
   );
