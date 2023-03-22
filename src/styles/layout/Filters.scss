@@ -1,0 +1,58 @@
+.filters {
+  background-color: black;
+  color: white;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    transform: translateY(-50px);
+  }
+  &__title {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    font-weight: 700;
+  }
+  &__input {
+    background-color: black;
+    text-align: center;
+    color: white;
+    height: 2.5rem;
+    width: 30rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    border: solid 2px white;
+  }
+  &__input::placeholder {
+    text-align: center;
+    font-size: 1.2rem;
+    color: rgb(252, 252, 252);
+    opacity: 0.5;
+    font-family: "Ubuntu Mono", monospace;
+  }
+
+  &__select {
+    background-color: black;
+    color: aliceblue;
+    border: solid 2px white;
+    border-radius: 10px;
+    font-family: "Ubuntu Mono", monospace;
+    padding: 3px;
+    margin: 10px;
+  }
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.error {
+  font-size: 30px;
+}

@@ -1,14 +1,15 @@
 import "../styles/layout/Footer.scss";
-import PropTypes from "prop-types";
+import Logo from "../images/logoHP.png";
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className='footer'>
-      <p>Footer</p>
+      <Link to={"/"}>
+        <img className='footer__logo' src={Logo} alt='Logo Harry Potter' />
+      </Link>
     </footer>
   );
 };
 
-Footer.propTypes = {
-  prueba: PropTypes.string,
-};
 export default Footer;

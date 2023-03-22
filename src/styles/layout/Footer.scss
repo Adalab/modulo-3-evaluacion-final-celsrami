@@ -1,5 +1,11 @@
 @import "../core/Variables";
 
 .footer {
-  color: red;
+  background-color: rgb(184, 233, 226);
+  text-align: center;
+  height: 35px;
+  &__logo {
+    width: 60px;
+    transform: translateY(-20px);
+  }
 }

@@ -6,7 +6,11 @@ const ListChasracter = ({ dataFetch }) => {
       return <CardCharacter key={character.id} character={character} />;
     });
   };
-  return <ul>{renderCharacter()}</ul>;
+  return (
+    <section>
+      <ul className='list'>{renderCharacter()}</ul>
+    </section>
+  );
 };
 
 export default ListChasracter;

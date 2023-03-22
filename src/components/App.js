@@ -2,6 +2,7 @@
 import { useLocation, matchPath } from "react-router";
 import { Route, Routes } from "react-router-dom";
 import "../styles/App.scss";
+import "../styles/layout/Main.scss";
 import { useEffect, useState } from "react";
 // Importamos el servicio del local storage
 // import ls from "../services/localStorage";
@@ -53,13 +54,14 @@ function App() {
   return (
     <div className='App'>
       <Header />
-      <main>
+      <main className='main'>
         <Routes>
           <Route
             path='/'
             element={
               <>
                 <Filters
+                  nameFilter={nameFilter}
                   handleName={handleName}
                   inputName={inputName}
                   handleHouse={handleHouse}
