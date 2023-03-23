@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "./static/css/main.3aaf7eb4.css",
+    "main.js": "./static/js/main.72b9b722.js",
+    "static/media/logoHP.png": "./static/media/logoHP.71a3fee130860b18babd.png",
+    "index.html": "./index.html",
+    "main.3aaf7eb4.css.map": "./static/css/main.3aaf7eb4.css.map",
+    "main.72b9b722.js.map": "./static/js/main.72b9b722.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3aaf7eb4.css",
+    "static/js/main.72b9b722.js"
+  ]
+}
