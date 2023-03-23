@@ -19,7 +19,7 @@ const FiltersHouse = ({ handleHouse, house }) => {
         </option>
         <option value='slytherin'>Slytherin</option>
         <option value='hufflepuff'>Hufflepuff</option>
-        <option value='ravenclaw'>Ravenclaw</option>
+        <option value='ravenclaw'>Slytherin</option>
       </select>
     </label>
   );
