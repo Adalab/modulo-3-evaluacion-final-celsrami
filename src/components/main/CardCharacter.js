@@ -4,9 +4,9 @@ const CardCharacter = ({ character }) => {
   return (
     <Link className='list__link' to={"/detail/" + character.id}>
       <li className='list__li'>
-        <div className='img'>
+        <div className='list__divImg'>
           <img
-            className='prueba'
+            className='list__img'
             src={
               character.img
                 ? character.img

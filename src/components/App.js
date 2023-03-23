@@ -13,7 +13,9 @@ import Header from "./Header";
 import Footer from "./Footer";
 import ListChasracter from "./main/ListCharacter";
 import Filters from "./main/Filters";
-import DetailCharacter from "./DetailCharacter";
+import DetailCharacter from "./main/DetailCharacter";
+import Error404 from "./main/Error404";
+import Landing from "./Landing";
 
 function App() {
   /* VARIABLES Y DATOS */
@@ -44,20 +46,26 @@ function App() {
       ? eachname.name.toLowerCase().includes(inputName.toLowerCase())
       : true;
   });
+
+  const buttonReset = (valuehouse, valuename) => {
+    setHouse(valuehouse);
+    setinputName(valuename);
+  };
   /* HTML */
 
   const { pathname } = useLocation();
   const routeData = matchPath("detail/:id", pathname);
-  const productId = routeData === null ? null : routeData.params.id;
-  const productFound = dataFetch.find((obj) => obj.id === productId);
+  const characterId = routeData === null ? null : routeData.params.id;
+  const characterFound = dataFetch.find((obj) => obj.id === characterId);
 
   return (
     <div className='App'>
       <Header />
       <main className='main'>
         <Routes>
+          <Route path='/' element={<Landing />} />
           <Route
-            path='/'
+            path='/home'
             element={
               <>
                 <Filters
@@ -66,15 +74,18 @@ function App() {
                   inputName={inputName}
                   handleHouse={handleHouse}
                   house={house}
+                  buttonReset={buttonReset}
                 />
+
                 <ListChasracter dataFetch={nameFilter} inputName={inputName} />
               </>
             }
           />
           <Route
             path='/detail/:id'
-            element={<DetailCharacter productFound={productFound} />}
+            element={<DetailCharacter characterFound={characterFound} />}
           />
+          <Route path='*' element={<Error404 />} />
         </Routes>
       </main>
       <Footer />

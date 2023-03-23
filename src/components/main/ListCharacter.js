@@ -1,4 +1,5 @@
 import CardCharacter from "./CardCharacter";
+import PropTypes from "prop-types";
 
 const ListChasracter = ({ dataFetch }) => {
   const renderCharacter = () => {
@@ -11,6 +12,10 @@ const ListChasracter = ({ dataFetch }) => {
       <ul className='list'>{renderCharacter()}</ul>
     </section>
   );
+};
+
+CardCharacter.propTypes = {
+  dataFetch: PropTypes.array,
 };
 
 export default ListChasracter;

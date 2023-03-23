@@ -19,6 +19,7 @@ const callToApi = (house) => {
           gender: translatedGender,
           species: translatedSpecies,
           alive: character.alive,
+          alternatename: character.alternate_names,
         };
       });
       return cleanData;

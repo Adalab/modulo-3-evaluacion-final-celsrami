@@ -3,9 +3,12 @@
 .footer {
   background-color: rgb(184, 233, 226);
   text-align: center;
-  height: 35px;
+  &__link {
+    transform: translateY(-50px);
+    background-color: aliceblue;
+  }
   &__logo {
     width: 60px;
-    transform: translateY(-20px);
+    transform: translateY(-60px);
   }
 }

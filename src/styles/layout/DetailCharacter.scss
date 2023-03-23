@@ -1,9 +1,14 @@
 .detail {
   display: flex;
-  background-color: black;
   flex-direction: column;
   justify-content: center;
   background-position: top 70%;
+  @media all and (min-width: 768px) {
+    transform: translateY(-60px);
+  }
+  @media all and (min-width: 1020px) {
+    transform: translateY(-100px);
+  }
 
   &__Link {
     transform: translateY(-60px);
@@ -57,4 +62,10 @@
     padding: 10px;
     line-height: 1.5;
   }
+}
+
+.error {
+  color: white;
+  display: flex;
+  justify-content: center;
 }
