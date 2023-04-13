@@ -6,7 +6,7 @@ En primer lugar, se muestra una Landing para dar inicio a nuestra aplicación. E
 
 Por último, si hacemos clic sobre uno de los personajes, nos lleva a una nueva página donde se muestra la información completa de dicho personaje.
 
-### Técnologías y metodologías utilizadas en el proyecto.
+###  	:electric_plug: Técnologías y metodologías utilizadas en el proyecto.
 
 - Uso de las etiquetas de html
 - Maquetación con Sass
