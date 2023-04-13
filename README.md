@@ -1,6 +1,6 @@
 ## Listado personajes Harry Potter
 
-### Explicación de la aplicación
+### :scroll: Explicación de la aplicación
 
 En primer lugar, se muestra una Landing para dar inicio a nuestra aplicación. En la página de inicio se hace una petición a un API que devuelve un listado de los personajes de Harry Potter. Estos personajes están filtrados por la casa a la que pertenecen: Gryffindor, Hufflepuff, Ravenclaw y Slytherin. En esta sección también se pueden buscar los personajes por su nombre y, en el caso de que no exista, aparece un párrafo que avisa de que no existe ese personaje.
 
